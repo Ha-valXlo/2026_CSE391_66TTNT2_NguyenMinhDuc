@@ -2,158 +2,179 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Bài Tập 04 - Form Nhân Sự</title>
+    <title>Bài Lab 4 - Cơ Bản</title>
     <style>
-        body { font-family: Arial, sans-serif; font-size: 14px; }
-        
-        /* CSS để bảng căn chỉnh đẹp mà không cần kẻ viền */
-        table { width: 100%; border-collapse: collapse; }
-        td { padding: 5px; vertical-align: top; } /* vertical-align: top để chữ luôn nằm ở trên cùng của ô */
-        
-        /* Cột bên trái (Label) */
-        .label-col { font-weight: bold; width: 150px; }
-        
-        /* Input text rộng full ô */
-        input[type="text"], select, textarea { width: 300px; padding: 3px; }
-        
-        /* Phần tiêu đề mục (Gạch chân) */
-        .section-header {
-            font-weight: bold;
-            border-bottom: 1px solid #ccc;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
+        /* CSS CƠ BẢN ĐỂ TẠO KHUNG */
+        body {
+            background-color: #eeeeee; /* Nền xám */
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            padding: 20px;
         }
 
-        /* Giả lập cái thanh công cụ soạn thảo ở phần Notes */
-        .toolbar {
-            background: #f0f0f0;
+        /* Cái khung trắng chứa form */
+        .form-box {
+            background-color: #ffffff;
+            width: 700px;
+            margin: 0 auto; /* Căn giữa màn hình */
+            padding: 20px;
             border: 1px solid #ccc;
-            border-bottom: none;
-            width: 300px;
-            padding: 2px;
         }
-        .toolbar button { width: 20px; height: 20px; font-size: 10px; cursor: pointer; }
+
+        /* Định dạng bảng để chia cột trái/phải */
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 5px; vertical-align: top; }
+
+        /* Cột Tiêu đề (Bên trái) */
+        .cot-trai {
+            font-weight: bold;
+            width: 150px;
+        }
+
+        /* Các ô nhập liệu (Bên phải) - cho rộng ra chút */
+        input[type="text"], input[type="email"], select, textarea {
+            width: 95%; /* Chiếm gần hết ô bên phải */
+            padding: 3px;
+        }
+
+        /* Kẻ gạch ngang phân chia các phần */
+        .tieu-de-muc {
+            font-weight: bold;
+            border-bottom: 1px solid #999;
+            margin: 15px 0 10px 0;
+            padding-bottom: 2px;
+        }
+
+        /* Yêu cầu: Link không gạch chân */
+        .link-khong-gach {
+            text-decoration: none;
+            color: black;
+            font-size: 11px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
-    <form action="#" method="post">
-        
-        <div class="section-header">Basic Info</div>
-        <table>
-            <tr>
-                <td class="label-col">Employee ID</td>
-                <td>9</td> </tr>
-            <tr>
-                <td class="label-col">Last Name</td>
-                <td>Dodsworth</td>
-            </tr>
-            <tr>
-                <td class="label-col">First Name</td>
-                <td><input type="text" value="Anne"></td>
-            </tr>
-            <tr>
-                <td class="label-col">Gender</td>
-                <td>
-                    <input type="radio" name="gender" id="male"> <label for="male">Male</label><br>
-                    <input type="radio" name="gender" id="female"> <label for="female">Female</label><br>
-                    <input type="radio" name="gender" id="xxx"> <label for="xxx">XXX</label><br>
-                    <input type="radio" name="gender" id="zzz" checked> <label for="zzz">ZZZ</label>
-                </td>
-            </tr>
-            <tr>
-                <td class="label-col">Title</td>
-                <td><input type="text" value="Sales Representative"></td>
-            </tr>
-            <tr>
-                <td class="label-col">Suffix</td>
-                <td><input type="text" value="Ms."></td>
-            </tr>
-            <tr>
-                <td class="label-col">Reports To</td>
-                <td>
-                    <select>
-                        <option>Buchanan</option>
-                        <option>Fuller</option>
-                        <option>Davolio</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
+    <div class="form-box">
+        <form>
+            
+            <div class="tieu-de-muc">Basic Info</div>
+            <table>
+                <tr>
+                    <td class="cot-trai">Employee ID</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Last Name</td>
+                    <td>Dodsworth</td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">First Name</td>
+                    <td><input type="text" value="Anne"></td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Gender</td>
+                    <td>
+                        <input type="radio" name="gender" id="m"> <label for="m">Male</label><br>
+                        <input type="radio" name="gender" id="f"> <label for="f">Female</label><br>
+                        <input type="radio" name="gender" id="x"> <label for="x">XXX</label><br>
+                        <input type="radio" name="gender" id="z" checked> <label for="z">ZZZ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Title</td>
+                    <td><input type="text" value="Sales Representative"></td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Suffix</td>
+                    <td><input type="text" value="Ms."></td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Reports To</td>
+                    <td>
+                        <select>
+                            <option>Buchanan</option>
+                            <option>Fuller</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
 
-        <div class="section-header">Contact Info</div>
-        <table>
-            <tr>
-                <td class="label-col">Email</td>
-                <td><input type="text" value="name@example.com" style="color: gray;"></td>
-            </tr>
-            <tr>
-                <td class="label-col">Address</td>
-                <td><input type="text" value="7 Houndstooth Rd."></td>
-            </tr>
-            <tr>
-                <td class="label-col">City</td>
-                <td><input type="text" value="London"></td>
-            </tr>
-            <tr>
-                <td class="label-col">Postal Code</td>
-                <td><input type="text" value="WG2 7LT"></td>
-            </tr>
-            <tr>
-                <td class="label-col">Country</td>
-                <td>
-                    <select>
-                        <option>Russian Federation</option>
-                        <option>UK</option>
-                        <option>USA</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="label-col">US Home Phone</td>
-                <td><input type="text" value="(234)234-2342"></td>
-            </tr>
-        </table>
+            <div class="tieu-de-muc">Contact Info</div>
+            <table>
+                <tr>
+                    <td class="cot-trai">Email</td>
+                    <td>
+                        <input type="email" placeholder="name@example.com" pattern=".+@example\.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Address</td>
+                    <td><input type="text" value="7 Houndstooth Rd."></td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">City</td>
+                    <td><input type="text" value="London"></td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Postal Code</td>
+                    <td><input type="text" value="WG2 7LT"></td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Country</td>
+                    <td>
+                        <select>
+                            <option>Russian Federation</option>
+                            <option>USA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">US Home Phone</td>
+                    <td><input type="text" value="(234)234-2342"></td>
+                </tr>
+            </table>
 
-        <div class="section-header">Optional Info</div>
-        <table>
-            <tr>
-                <td class="label-col">Notes</td>
-                <td>
-                    <div class="toolbar">
-                        <button>B</button> <button>I</button> <button>U</button>
-                    </div>
-                    <textarea rows="5">Anne has a BA degree in English from St. Lawrence College.</textarea>
-                </td>
-            </tr>
-            <tr>
-                <td class="label-col">Preferred Shift</td>
-                <td>
-                    <input type="checkbox" id="reg"> <label for="reg">Regular</label><br>
-                    <input type="checkbox" id="gravy" checked> <label for="gravy">Gravy Yard</label>
-                </td>
-            </tr>
-            <tr>
-                <td class="label-col">Active?</td>
-                <td><input type="checkbox" checked></td>
-            </tr>
-            <tr>
-                <td class="label-col">Are you human?</td>
-                <td>
-                    <div style="font-family: monospace; font-size: 20px; letter-spacing: 3px;">TIDAWO</div>
-                    <div style="width: 150px;"> <a href="#" style="font-size: 12px;">Click to change</a>
-                </td>
-            </tr>
-        </table>
+            <div class="tieu-de-muc">Optional Info</div>
+            <table>
+                <tr>
+                    <td class="cot-trai">Notes</td>
+                    <td>
+                        <textarea rows="5">Anne has a BA degree in English from St. Lawrence College.</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Preferred Shift</td>
+                    <td>
+                        <input type="checkbox" id="reg"> <label for="reg">Regular</label><br>
+                        <input type="checkbox" id="gravy" checked> <label for="gravy">Gravy Yard</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Active?</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td class="cot-trai">Are you human?</td>
+                    <td>
+                        <div style="letter-spacing: 5px; font-family: monospace; font-size: 20px;">TIDAWO</div>
+                        <input type="text" style="width: 150px;">
+                        
+                        <a href="#" class="link-khong-gach">Click to change</a>
+                    </td>
+                </tr>
+            </table>
 
-        <hr>
-        <div style="text-align: right; padding: 10px;">
-            <button type="submit" style="background-color: #333; color: white; padding: 5px 15px;">Submit</button>
-            <button type="button" style="background-color: #333; color: white; padding: 5px 15px;">Cancel</button>
-        </div>
+            <hr>
+            <div style="text-align: right;">
+                <button type="submit">Submit</button>
+                <button type="button">Cancel</button>
+            </div>
 
-    </form>
+        </form>
+    </div>
 
 </body>
 </html>
