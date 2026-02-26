@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Flexbox Form</title>
+    <style>
+        /* --- CSS CƠ BẢN --- */
+        * {
+            box-sizing: border-box; /* Giúp input không bị tràn khi thêm padding */
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%; /* Mặc định các ô nhập liệu dài 100% */
+            outline: none;
+            color: #555;
+        }
+
+        /* --- BẮT ĐẦU DÙNG FLEXBOX --- */
+
+        /* 1. KHUNG FORM TỔNG */
+        .form-container {
+            border: 1px solid #666;
+            padding: 30px;
+            max-width: 800px;
+            
+            /* Bật Flexbox và xếp dọc */
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; /* Tự động tạo khoảng cách 15px giữa các dòng */
+        }
+
+        .form-container h3 {
+            margin: 0 0 10px 0;
+            color: #444;
+        }
+
+        /* 2. DÒNG CHỨA TÊN VÀ EMAIL */
+        .row-2-inputs {
+            /* Bật Flexbox để 2 ô nằm ngang */
+            display: flex;
+            gap: 20px; /* Khoảng cách giữa 2 ô */
+        }
+
+        .row-2-inputs input {
+            /* Lệnh này giúp 2 ô input tự động giãn ra chia đều 50/50 */
+            flex: 1; 
+        }
+
+        /* 3. DÒNG CUỐI (NÚT BẤM VÀ GHI CHÚ) */
+        .row-submit {
+            /* Bật Flexbox để nằm ngang */
+            display: flex;
+            
+            /* Đẩy nút dạt sang mép trái, chữ dạt sang mép phải */
+            justify-content: space-between; 
+            
+            /* Căn cho chữ và nút thẳng hàng nhau theo chiều ngang */
+            align-items: center; 
+            margin-top: 10px;
+        }
+
+        /* Trang trí thêm cho nút bấm và chữ */
+        button {
+            background-color: #63c2f0;
+            color: white;
+            border: 1px solid #4baadd;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .note {
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        
+        <h3>Get in touch with us by filling contact form below</h3>
+
+        <div class="row-2-inputs">
+            <input type="text" placeholder="* Enter your full name">
+            <input type="text" placeholder="* Enter your email address">
+        </div>
+
+        <input type="text" placeholder="Enter your subject">
+
+        <textarea rows="8" placeholder="* Your message here..."></textarea>
+
+        <div class="row-submit">
+            <button>Send message</button>
+            <span class="note">* Please fill all required form field, thanks!</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
