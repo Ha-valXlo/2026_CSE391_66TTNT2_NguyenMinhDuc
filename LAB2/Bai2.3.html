@@ -13,25 +13,23 @@
         }
 
         body {
-            /* Dùng font chữ giống máy đánh chữ để sát với thiết kế */
             font-family: 'Courier New', Courier, monospace; 
-            background-color: #f9f9f9; /* Màu nền xám thật nhạt */
+            background-color: #f9f9f9; 
             color: #555;
             padding: 40px;
         }
 
-        /* --- KHUNG CHỨA TOÀN BỘ NỘI DUNG --- */
+        /* KHUNG NỘI DUNG */
         .container {
             max-width: 1000px;
-            margin: 0 auto; /* Căn giữa màn hình */
+            margin: 0 auto;
             background-color: white;
             padding: 60px 40px;
-            /* Tạo 2 đường viền màu xanh nhạt ở 2 bên mép */
             border-left: 4px solid #8bd3e6;
             border-right: 4px solid #8bd3e6;
         }
 
-        /* --- TIÊU ĐỀ CHÍNH --- */
+        /* TIÊU ĐỀ */
         .main-heading {
             text-align: center;
             font-size: 28px;
@@ -41,19 +39,18 @@
             line-height: 1.5;
         }
 
-        /* --- KHU VỰC FLEXBOX (CHIA 2 CỘT) --- */
+        /*FLEXBOX */
         .content-wrapper {
-            display: flex; /* Bật Flexbox để dàn hàng ngang */
-            gap: 50px;     /* Khoảng cách giữa cột trái và cột phải */
-            align-items: flex-start; /* Ép các cột bám lên trên cùng */
+            display: flex;
+            gap: 50px;    
+            align-items: flex-start; 
         }
 
-        /* --- CỘT TRÁI: THẺ CARD --- */
+        /*THẺ CARD */
         .card {
-            flex: 1; /* Chiếm 1 phần diện tích */
+            flex: 1; 
             background-color: #fff;
             padding: 40px 30px;
-            /* Tạo hiệu ứng đổ bóng mờ ảo cho viền khung */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
         }
 
@@ -79,13 +76,13 @@
 
         .author span {
             font-size: 12px;
-            color: #4baadd; /* Màu xanh nước biển */
+            color: #4baadd; 
             font-weight: bold;
         }
 
-        /* --- CỘT PHẢI: NỘI DUNG CHỮ --- */
+
         .text-content {
-            flex: 2; /* Chiếm 2 phần diện tích (to gấp đôi cột trái) */
+            flex: 2; 
         }
 
         .text-content p {
@@ -95,7 +92,6 @@
             color: #666;
         }
 
-        /* Thẻ p có class bold-text sẽ được in đậm và màu đen hơn */
         .text-content p.bold-text {
             font-weight: bold;
             color: #333;
@@ -134,4 +130,5 @@
     </div>
 
 </body>
+
 </html>
