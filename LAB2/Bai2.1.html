@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập Flexbox Form</title>
     <style>
-        /* --- CSS CƠ BẢN --- */
         * {
             box-sizing: border-box; /* Giúp input không bị tràn khi thêm padding */
             font-family: Arial, sans-serif;
@@ -24,18 +23,15 @@
             color: #555;
         }
 
-        /* --- BẮT ĐẦU DÙNG FLEXBOX --- */
 
-        /* 1. KHUNG FORM TỔNG */
         .form-container {
             border: 1px solid #666;
             padding: 30px;
             max-width: 800px;
             
-            /* Bật Flexbox và xếp dọc */
             display: flex; 
             flex-direction: column; 
-            gap: 15px; /* Tự động tạo khoảng cách 15px giữa các dòng */
+            gap: 15px; 
         }
 
         .form-container h3 {
@@ -43,32 +39,27 @@
             color: #444;
         }
 
-        /* 2. DÒNG CHỨA TÊN VÀ EMAIL */
+        /* TÊN VÀ EMAIL */
         .row-2-inputs {
-            /* Bật Flexbox để 2 ô nằm ngang */
+
             display: flex;
-            gap: 20px; /* Khoảng cách giữa 2 ô */
+            gap: 20px; 
         }
 
         .row-2-inputs input {
-            /* Lệnh này giúp 2 ô input tự động giãn ra chia đều 50/50 */
             flex: 1; 
         }
 
-        /* 3. DÒNG CUỐI (NÚT BẤM VÀ GHI CHÚ) */
+        /* NÚT BẤM VÀ GHI CHÚ */
         .row-submit {
-            /* Bật Flexbox để nằm ngang */
             display: flex;
             
-            /* Đẩy nút dạt sang mép trái, chữ dạt sang mép phải */
             justify-content: space-between; 
             
-            /* Căn cho chữ và nút thẳng hàng nhau theo chiều ngang */
             align-items: center; 
             margin-top: 10px;
         }
 
-        /* Trang trí thêm cho nút bấm và chữ */
         button {
             background-color: #63c2f0;
             color: white;
@@ -109,4 +100,5 @@
     </div>
 
 </body>
+
 </html>
